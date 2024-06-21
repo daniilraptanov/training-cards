@@ -6,15 +6,19 @@ export async function playCards(rl, filePath) {
         const data = await readJSONFile(filePath);
         let questions = [...data.cards];
 
-        while (questions.length > 0) {
-            const currentQuestion = questions[0];
-            const response = await askQuestion(rl, `${currentQuestion.question} | yes/no: `);
-
-            if (response.toLowerCase() === "yes") {
-                questions.shift();
-            } else {
-                console.log(`Answer: ${currentQuestion.answer}`);
+        let index = 0;
+        while (questions.length) {
+            if (questions.length <= index) {
+                index = 0;
             }
+
+            const currentQuestion = questions[index];
+            const response = await askQuestion(rl, `${currentQuestion.question} | yes/no: `);
+            if (response.toLowerCase() === "yes") {
+                questions.splice(index, 1);
+            }
+            console.log(`Answer: ${currentQuestion.answer}`);
+            index++;
         }
 
         console.log("No more questions left.");
