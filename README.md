@@ -1,6 +1,14 @@
 # training-cards
 
 Automatization for personal learning computer science and mathematics.
+Application has 2 modes: adding of new cards and playing cards from a file.
+Data storage in json format. For now you can use only console.
+This application created for myself improvement in studying.
+Themes to learn:
+
+-   Software Architecture
+-   Linear Algebra
+-   Statistics
 
 ## Run project (for dev):
 
