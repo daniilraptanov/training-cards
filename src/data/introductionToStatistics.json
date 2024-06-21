@@ -1,16 +1,5 @@
 {
   "label": "Introduction to Statistics",
   "link": "https://www.coursera.org/learn/stanford-statistics",
-  "cards": [
-    {
-      "id": 1,
-      "question": "Q-1: how to use life?",
-      "answer": "Lololo!"
-    },
-    {
-      "id": 2,
-      "question": "Q-2: lalla?",
-      "answer": "ahahha, yeah!"
-    }
-  ]
+  "cards": []
 }
